@@ -6,8 +6,7 @@ var searchYouTube = ({key, query = 'dogs', max = 6}, setResults) => {
     maxResults: max,
     type: 'video',
     videoEmbeddable: 'true'
-  })
-  .done(({items}) => {
+  }).done(({items}) => {
     if (setResults) {
       setResults(items);
     }
