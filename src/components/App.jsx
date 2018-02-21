@@ -37,20 +37,20 @@ class App extends React.Component {
     return (
       <div>
         <nav className="navbar">
-        <div className="row">
-          <div className="col-md-6 offset-md-3">
-            <Search
-              handleSearchInputChange={this.getYouTubeVideos.bind(this)}
-            />
+          <div className="row">
+            <div className="col-md-6 offset-md-3">
+              <Search
+                handleSearchInputChange={this.getYouTubeVideos.bind(this)}
+              />
+            </div>
           </div>
-        </div>
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <VideoPlayer video={this.state.currentVideo}/>
+            <Player video={this.state.currentVideo}/>
           </div>
           <div className="col-md-5">
-          {/*
+            {/*
             * It's very important to bind the context of this callback.
             * Also acceptable is to pass a anonymous function expression with a fat
             * arrow that inherits the surrounding lexical `this` context:
